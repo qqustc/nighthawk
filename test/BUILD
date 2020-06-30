@@ -202,6 +202,7 @@ envoy_cc_test(
         "//test/test_common:environment_lib",
         "@envoy//source/common/protobuf:utility_lib_with_external_headers",
         "@envoy//source/common/stats:isolated_store_lib_with_external_headers",
+        "@envoy//test/mocks/stats:stats_mocks",
     ],
 )
 
