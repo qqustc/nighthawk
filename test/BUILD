@@ -195,7 +195,10 @@ envoy_cc_test(
 envoy_cc_test(
     name = "statistic_test",
     srcs = ["statistic_test.cc"],
-    data = ["test_data/hdr_proto_json.gold", "test_data/circllhist_proto_json.gold"],
+    data = [
+        "test_data/circllhist_proto_json.gold",
+        "test_data/hdr_proto_json.gold",
+    ],
     repository = "@envoy",
     deps = [
         "//source/common:nighthawk_common_lib",

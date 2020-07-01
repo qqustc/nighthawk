@@ -22,7 +22,8 @@ using namespace testing;
 
 namespace Nighthawk {
 
-using MyTypes = Types<SimpleStatistic, InMemoryStatistic, HdrStatistic, StreamingStatistic, CircllhistStatistic>;
+using MyTypes = Types<SimpleStatistic, InMemoryStatistic, HdrStatistic, StreamingStatistic,
+                      CircllhistStatistic>;
 
 template <typename T> class TypedStatisticTest : public Test {};
 
@@ -270,7 +271,7 @@ TEST(StatisticTest, StreamingStatProtoOutputLargeValues) {
 
   EXPECT_EQ(proto.pstdev().nanos(), 0);
 }
-  
+
 TEST(StatisticTest, CircllhistStatisticProtoOutputLargeValues) {
   CircllhistStatistic a;
   uint64_t value = 100ul + 0xFFFFFFFF;
@@ -303,7 +304,7 @@ TEST(StatisticTest, HdrStatisticPercentilesProto) {
   const std::string golden_json = util.getJsonStringFromMessage(parsed_json_proto, true, true);
   EXPECT_EQ(json, golden_json);
 }
-  
+
 TEST(StatisticTest, CircllhistStatisticPercentilesProto) {
   nighthawk::client::Statistic parsed_json_proto;
   CircllhistStatistic statistic;
@@ -365,7 +366,7 @@ TEST(StatisticTest, NullStatistic) {
   EXPECT_EQ(0, stat.significantDigits());
   EXPECT_NE(nullptr, stat.createNewInstanceOfSameType());
 }
-  
+
 TEST(StatisticTest, EmptySinkableCircllhistStatistic) {
   Envoy::Stats::MockIsolatedStatsStore mock_store;
   SinkableCircllhistStatistic stat(mock_store);
