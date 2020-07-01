@@ -314,7 +314,7 @@ TEST(StatisticTest, CircllhistStatisticPercentilesProto) {
 
   Envoy::MessageUtil util;
   util.loadFromJson(Envoy::Filesystem::fileSystemForTest().fileReadToEnd(
-                        TestEnvironment::runfilesPath("test/test_data/hdr_proto_json.gold")),
+                        TestEnvironment::runfilesPath("test/test_data/circllhist_proto_json.gold")),
                     parsed_json_proto, Envoy::ProtobufMessage::getStrictValidationVisitor());
   // Instead of comparing proto's, we perform a string-based comparison, because that emits a
   // helpful diff when this fails.
