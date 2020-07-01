@@ -1,0 +1,60 @@
+{
+ "count": "10",
+ "id": "",
+ "percentiles": [
+  {
+   "percentile": 0,
+   "count": "1",
+   "duration": "0.000000001s"
+  },
+  {
+   "percentile": 0.25,
+   "count": "3",
+   "duration": "0.000000003s"
+  },
+  {
+   "percentile": 0.5,
+   "count": "5",
+   "duration": "0.000000005s"
+  },
+  {
+   "percentile": 0.75,
+   "count": "8",
+   "duration": "0.000000008s"
+  },
+  {
+   "percentile": 0.9,
+   "count": "9",
+   "duration": "0.000000009s"
+  },
+  {
+   "percentile": 0.95,
+   "count": "10",
+   "duration": "0.000000010s"
+  },
+  {
+   "percentile": 0.99,
+   "count": "10",
+   "duration": "0.000000010s"
+  },
+  {
+   "percentile": 0.995,
+   "count": "10",
+   "duration": "0.000000010s"
+  },
+  {
+   "percentile": 0.999,
+   "count": "10",
+   "duration": "0.000000010s"
+  },
+  {
+   "percentile": 1,
+   "count": "10",
+   "duration": "0.000000010s"
+  }
+ ],
+ "mean": "0.000000006s",
+ "pstdev": "0.000000003s",
+ "min": "0.000000001s",
+ "max": "0.000000010s"
+}
