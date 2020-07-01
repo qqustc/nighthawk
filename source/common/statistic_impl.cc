@@ -255,7 +255,7 @@ nighthawk::client::Statistic CircllhistStatistic::toProto(SerializationDomain do
   std::vector<double> quantiles{0, 0.25, 0.5, 0.75, 0.90, 0.95, 0.99, 0.995, 0.999, 1};
   std::vector<double> computed_quantiles(quantiles.size(), 0.0);
   hist_approx_quantile(histogram_, quantiles.data(), quantiles.size(), computed_quantiles.data());
-  for (int i = 0; i < quantiles.size(); i++) {
+  for (size_t i = 0; i < quantiles.size(); i++) {
     nighthawk::client::Percentile* percentile = proto.add_percentiles();
     if (domain == Statistic::SerializationDomain::DURATION) {
       setDurationFromNanos(*percentile->mutable_duration(), static_cast<int64_t>(computed_quantiles[i]));
