@@ -263,6 +263,7 @@ nighthawk::client::Statistic CircllhistStatistic::toProto(SerializationDomain do
       percentile->set_raw_value(computed_quantiles[i]);
     }
     percentile->set_percentile(quantiles[i]);
+    percentile->set_count(hist_approx_count_below(histogram_, computed_quantiles[i]));
   }
 
   return proto;
